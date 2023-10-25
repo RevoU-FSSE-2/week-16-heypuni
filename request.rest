@@ -1,0 +1,79 @@
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Punai",
+  "email": "admin3@gmail.com",
+  "password": "123456", 
+  "confPassword" : "123456",
+  "role": "admin"
+}
+
+### get All Users
+
+GET http://localhost:3000/users
+
+
+### Get User By Id
+GET http://localhost:3000/users/55d4f7e4-7f36-44af-9dac-66de48df5951
+
+
+### Delete User
+DELETE http://localhost:3000/users/55d4f7e4-7f36-44af-9dac-66de48df5951
+
+
+### Login User
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "hymne@gmail.com",
+  "password": "123456"
+}
+
+### Login Admin
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "admin2@gmail.com",
+  "password": "123456"
+}
+
+### Me 
+GET http://localhost:3000/me
+
+### Logout
+DELETE http://localhost:3000/logout
+
+### Get All Recipes
+GET http://localhost:3000/recipes
+
+### Get a Single Recipe
+GET http://localhost:3000/recipes/15b1843a-30b9-4c13-964d-d2c225ea78be
+
+### Post a Recipe
+POST http://localhost:3000/recipes
+Content-Type: application/json
+
+{
+  "title": "Microwave Popcorn",
+  "ingredients": "Popcorn Kernels, Butter, Salt",
+  "steps": "Place the popcorn kernels in a microwave-safe bowl; Microwave on high for 2-3 minutes or until popping slows down; Sprinkle with salt to taste, and toss to combine."
+}
+
+### Update a Recipe
+PATCH http://localhost:3000/recipes/15b1843a-30b9-4c13-964d-d2c225ea78be
+Content-Type: application/json
+
+{
+  "title": "Microwave Vegetable Medley",
+  "ingredients": "Broccoli florets, Carrot slices, Bell pepper strips, Olive oil, Salt, Black pepper.",
+  "steps": "Place the broccoli, carrot slices, and bell pepper strips in a microwave-safe dish; Drizzle with olive oil, and sprinkle with salt and black pepper; Cover with a microwave-safe lid; Microwave for about 3-4 minutes."
+}
+
+### Delete a Recipe
+DELETE http://localhost:3000/recipes/15b1843a-30b9-4c13-964d-d2c225ea78be
+
+ 
+
